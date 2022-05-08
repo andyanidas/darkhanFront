@@ -1,0 +1,11 @@
+.contents {
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.login,
+.register {
+  height: calc(100vh - 90px) !important;
+  background-color: chocolate;
+}
