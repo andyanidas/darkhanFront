@@ -6,8 +6,6 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Prices from "./components/Prices";
 import Main from "./components/Main";
-import Login from "./components/Login";
-import Register from "./components/Register";
 import SingleNews from "./components/SingleNews";
 
 function App() {
@@ -16,8 +14,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+
         <Route path="/darkhandeed" element={<Main />} />
         <Route path="/news" element={<NewsComponent />} />
         <Route path="/about" element={<About />} />

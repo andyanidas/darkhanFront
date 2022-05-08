@@ -7,6 +7,8 @@ import ReactMarkdown from "react-markdown";
 export default function SingleNews() {
   const { id } = useParams();
   const { loading, error, data } = useFetch("posts/" + id);
+  if (loading) return <>Loading</>;
+  if (error) return <>Error</>;
   return (
     <div>
       <Card>

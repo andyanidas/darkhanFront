@@ -1,4 +1,3 @@
-import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 const cardStyle = {
   container: {
@@ -26,6 +25,7 @@ export default function NewsCard(props: any) {
       <h3 style={cardStyle.header}>{props.attributes.title}</h3>
       <img src={props.attributes.imageUrl} alt="" style={cardStyle.image} />
       <p>{props.attributes.body.substring(0, 70)}...</p>
+      <Link to={"/"}>Read More</Link>
     </div>
   );
 }

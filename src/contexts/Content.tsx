@@ -1,5 +1,4 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { contentFetch } from "../services/otherServices";
 import { useFetch } from "../customHooks/useFetch";
 
 interface Content {
@@ -20,7 +19,7 @@ export function useContent() {
 
 export default function ContentProvider(props: any) {
   const [contents, setContents] = useState<Content[]>([]);
-  const { loading, error, data } = useFetch("contents");
+  const { data } = useFetch("contents");
   useEffect(() => {
     setContents(data?.data);
   }, [data]);

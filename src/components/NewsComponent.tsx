@@ -8,7 +8,8 @@ export default function NewsComponent() {
   const { loading, error, data } = useFetch(
     "https://darkhandeed.herokuapp.com/api/posts"
   );
-  console.log(data);
+  if (loading) return <>Loading</>;
+  if (error) return <>Error</>;
   return (
     <div>
       {data?.data.map((news: News) => (

@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import { useState, useEffect } from "react";
 import { FetchHook, News, Method } from "../types/fetch";
 import { URL } from "../util/constants";
@@ -28,6 +27,6 @@ export function useFetch(url: string, method?: Method): FetchHook {
       }
     };
     fetchData();
-  }, [url]);
+  }, [url, method]);
   return { loading, error, data };
 }

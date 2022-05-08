@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "../style/main.css";
-import partTwoPic from "../images/pictures/part-two-pic.png";
 import { Carousel } from "react-bootstrap";
 import { images } from "../services/otherServices";
 import { useFetch } from "../customHooks/useFetch";
@@ -33,7 +32,6 @@ export default function Main() {
   const { loading, error, data } = useFetch("posts");
   const [part1, setPart1] = useState<Content | undefined>();
   const [part2, setPart2] = useState<Content[] | undefined>();
-  const [part3, setPart3] = useState<Content | undefined>();
   const contents = useContent();
   useEffect(() => {
     setPart1(contents?.find((content) => content.id === 1));
@@ -59,16 +57,37 @@ export default function Main() {
     justifyContent: "space-between",
   };
   const partTwo1 = {
-    backgroundImage:
-      "url(" + `${part2 ? part2[0]?.attributes?.imageUrl : ""}` + ")",
+    backgroundImage: "url("
+      .concat(
+        part2
+          ? part2[0]?.attributes?.imageUrl
+            ? part2[0]?.attributes?.imageUrl
+            : ""
+          : ""
+      )
+      .concat(")"),
   };
   const partTwo2 = {
-    backgroundImage:
-      "url(" + `${part2 ? part2[1]?.attributes?.imageUrl : ""}` + ")",
+    backgroundImage: "url("
+      .concat(
+        part2
+          ? part2[1]?.attributes?.imageUrl
+            ? part2[1]?.attributes?.imageUrl
+            : ""
+          : ""
+      )
+      .concat(")"),
   };
   const partTwo3 = {
-    backgroundImage:
-      "url(" + `${part2 ? part2[2]?.attributes?.imageUrl : ""}` + ")",
+    backgroundImage: "url("
+      .concat(
+        part2
+          ? part2[2]?.attributes?.imageUrl
+            ? part2[2]?.attributes?.imageUrl
+            : ""
+          : ""
+      )
+      .concat(")"),
   };
   const part2Style = [
     { ...partTwoStyle, ...partTwo1 },
@@ -102,7 +121,8 @@ export default function Main() {
     },
     part4: {},
   };
-
+  if (loading) return <>laoding</>;
+  if (error) return <>Error</>;
   return (
     <div className="main">
       <Carousel>
