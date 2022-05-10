@@ -5,7 +5,7 @@ export interface News {
   attributes: {
     title: string;
     body: string;
-    imageUrl: string;
+    imageUrl?: string;
   };
 }
 export interface FetchHook {
