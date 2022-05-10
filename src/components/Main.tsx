@@ -46,7 +46,7 @@ export default function Main() {
         </div>
         <PartFour part2={part2} />
         <PartFive data={data} />
-        <Test>{}</Test>
+        {/* <Test>{}</Test> */}
         <div className="part-four">
           <div className="texts">
             <h2>Mobile Applications</h2>

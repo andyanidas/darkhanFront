@@ -3,7 +3,7 @@
   display: flex;
 
   text-decoration: none;
-  color: rgb(238, 232, 221);
+  /* color: rgb(238, 232, 221); */
 }
 #logo img {
   position: relative;
@@ -20,14 +20,14 @@
 }
 #menu ul li a {
   text-decoration: none;
-  color: white;
+  /* color: white; */
 }
 
 .header div button {
   height: 40px;
   color: rgb(128, 75, 75);
 }
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
   color: white;
@@ -38,12 +38,12 @@
   width: 100%;
   z-index: 10;
   background-color: rgb(42, 42, 42) !important;
-}
+} */
 .container a,
 /* .navbar-nav, */
 .nav-link {
   /* background-color: aquamarine; */
-  color: white !important;
+  /* color: white !important; */
   font-weight: 600;
   font-family: "Arial, Geneva, sans-serif";
   text-transform: uppercase;

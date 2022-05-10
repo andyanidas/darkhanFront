@@ -11,18 +11,12 @@ export function PartFive({ data }: any) {
       padding: " 40px",
       borderRadius: "20px",
       textAlign: "center" as "center",
-      p: {
-        color: "green",
-      },
     },
     header: {
-      backgroundColor: " rgba(50, 49, 111, 0.321)",
-      height: "40px",
-      width: "300px",
-      borderRadius: "30px",
-      textAlign: "center" as "center",
+      margin: "20px",
     },
     items: {
+      height: "100%",
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
@@ -33,8 +27,11 @@ export function PartFive({ data }: any) {
   };
   return (
     <div style={styles.container}>
-      <p>МЭДЭЭ</p>
-      <h2>СОНИН САЙХАН</h2>
+      <div style={styles.header}>
+        <p>МЭДЭЭ</p>
+        <h2>СОНИН САЙХАН</h2>
+      </div>
+
       <div style={styles.items}>
         {data?.data.slice(0, 4).map((data: News) => (
           <NewsCard key={data.id} {...data} />

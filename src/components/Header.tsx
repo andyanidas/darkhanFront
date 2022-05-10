@@ -5,20 +5,34 @@ import mainLogo from "../images/icons/main_logo.png";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
 function Header() {
+  const style = {
+    // fontSize: "20px",
+    color: "white",
+  };
   return (
-    <Navbar expand="lg" className="header">
+    <Navbar expand="lg" bg="dark" style={style}>
       <Container>
         <Navbar.Brand href="#home">
           <a href="/" id="logo">
             <img src={mainLogo} alt="" />
           </a>
         </Navbar.Brand>
-        <Navbar.Brand href="/">Дархан Дээд Сургууль</Navbar.Brand>
+        <Navbar.Brand href="/" style={style}>
+          Дархан Дээд Сургууль
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav.Link href="/news">МЭДЭЭ</Nav.Link>
-          <Nav.Link href="#link">БАГШ НАР</Nav.Link>
-          <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+        <Navbar.Collapse id="basic-navbar-nav" style={style}>
+          <Nav.Link href="/news" style={style}>
+            МЭДЭЭ
+          </Nav.Link>
+          <Nav.Link href="#link" style={style}>
+            БАГШ НАР
+          </Nav.Link>
+          <NavDropdown
+            title="Dropdown "
+            id="basic-nav-dropdown"
+            className="d-md-none text-dark"
+          >
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
               Another action
@@ -29,10 +43,18 @@ function Header() {
               Separated link
             </NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="#link">Бидний тухай</Nav.Link>
-          <Nav.Link href="#link">Элсэлт</Nav.Link>
-          <Nav.Link href="#link">Эрдэм шинжилгээ</Nav.Link>
-          <Nav.Link href="#link">Төгсөгчид</Nav.Link>
+          <Nav.Link href="#link" style={style}>
+            Бидний тухай
+          </Nav.Link>
+          <Nav.Link href="#link" style={style}>
+            Элсэлт
+          </Nav.Link>
+          <Nav.Link href="#link" style={style}>
+            Эрдэм шинжилгээ
+          </Nav.Link>
+          <Nav.Link href="#link" style={style}>
+            Төгсөгчид
+          </Nav.Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

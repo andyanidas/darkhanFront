@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 const cardStyle = {
   container: {
     width: "200px",
-    height: "200px",
+    height: "100%",
     backgroundColor: "rgba(119, 119, 119, 0.95)",
     display: "block",
     borderRadius: "10px",
