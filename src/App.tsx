@@ -7,11 +7,12 @@ import Contact from "./components/Contact";
 import Prices from "./components/Prices";
 import Main from "./components/Main";
 import SingleNews from "./components/SingleNews";
+import Test from "./components/subComponents/Test";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header />
       <Routes>
         <Route path="/" element={<Main />} />
 
@@ -21,7 +22,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/prices" element={<Prices />} />
         <Route path="/news/:id" element={<SingleNews />} />
-      </Routes>
+      </Routes> */}
+      <Test />
       <Footer />
     </div>
   );

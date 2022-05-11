@@ -1,94 +1,66 @@
-import { FC } from "react";
-// import { Box, ThemeProps } from "@nest/components";
-import {
-  Grid,
-  Box,
-  Container,
-  Typography,
-  Stack,
-  AppBar,
-  styled,
-  alpha,
-  Link,
-  Divider,
-  useMediaQuery,
-  Grow,
-  useTheme,
-  Skeleton,
-  ClickAwayListener,
-  Dialog,
-  Tooltip,
-  Pagination,
-} from "@mui/material";
+import { FC, useState } from "react";
+import { AnimatePresence } from "framer";
 import { makeStyles } from "@mui/styles";
-
-const useStyles = makeStyles((theme) => ({
-  container: {
-    overflow: "hidden",
-    display: "flex",
-    width: "100vw",
-    "& > *:not(:last-child)": {
-      marginRight: theme.spacing(7),
-    },
-    [theme.breakpoints.down("sm")]: {
-      "& > *:not(:last-child)": {
-        marginRight: theme.spacing(4),
-      },
-    },
-    "&:hover": {
-      "& > *": {
-        animationPlayState: "paused",
-      },
-    },
+import { Card } from "react-bootstrap";
+import { motion, AnimateSharedLayout } from "framer-motion";
+import "./style.css";
+const items = [
+  {
+    id: 0,
+    subtitle: "sub1",
+    title: "long title asdaklskfalsdg",
   },
-  marquee: {
-    flex: "0 0 auto",
-    zIndex: 1,
-    animation: "$slide 250s infinite linear",
-    alignItems: "center",
-    display: "flex",
-    minWidth: "100%",
-    "& > *:not(:last-child)": {
-      marginRight: theme.spacing(7),
-    },
-    [theme.breakpoints.down("sm")]: {
-      "& > *:not(:last-child)": {
-        marginRight: theme.spacing(4),
-      },
-    },
+  {
+    id: 1,
+    subtitle: "sub 2",
+    title: "2222 long title asdaklskfalsdg",
   },
-  "@keyframes slide": {
-    "0%": {
-      transform: "translateX(0%)",
-    },
-    "100%": {
-      transform: "translateX(-100%)",
-    },
+  {
+    id: 2,
+    subtitle: "sub 2",
+    title: "2222 long title asdaklskfalsdg",
   },
-}));
-
-const Test = ({ direction = "left", children }) => {
-  const styles = useStyles();
+];
+const Test = () => {
+  const [selected, setSelected] = useState(colors[0]);
 
   return (
-    <Box data-testid="marquee" className={styles.container}>
-      <Box
-        className={styles.marquee}
-        style={{
-          animationDirection: direction === "left" ? "normal" : "reverse",
-        }}
-      >
-        {children}
-      </Box>
-      <Box
-        className={styles.marquee}
-        style={{
-          animationDirection: direction === "left" ? "normal" : "reverse",
-        }}
-      >
-        {children}
-      </Box>
-    </Box>
+    <AnimateSharedLayout>
+      <ul>
+        {colors.map((color) => (
+          <Item
+            key={color}
+            color={color}
+            isSelected={selected === color}
+            onClick={() => setSelected(color)}
+          />
+        ))}
+      </ul>
+    </AnimateSharedLayout>
   );
 };
 export default Test;
+
+function Item({ color, isSelected, onClick }) {
+  return (
+    <li className="item" onClick={onClick} style={{ backgroundColor: color }}>
+      {isSelected && (
+        <motion.div
+          layoutId="outline"
+          className="outline"
+          initial={false}
+          animate={{ borderColor: color }}
+          transition={spring}
+        />
+      )}
+    </li>
+  );
+}
+
+const colors = ["#ff0055", "#0099ff", "#22cc88", "#ffaa00"];
+
+const spring = {
+  type: "spring",
+  stiffness: 500,
+  damping: 30,
+};
