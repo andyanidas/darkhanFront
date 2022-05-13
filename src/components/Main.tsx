@@ -14,6 +14,7 @@ import {
   PartFive,
 } from "./subComponents";
 import Test from "./subComponents/Test";
+import Loading from "./Loading";
 
 export default function Main() {
   const { loading, error, data } = useFetch("posts");
@@ -32,7 +33,8 @@ export default function Main() {
     );
   }, [contents]);
 
-  if (loading) return <Spinner animation="border" />;
+  if (loading) return <Loading />;
+  // if (loading) return <Spinner animation="border" />;
   if (error) return <>Error</>;
   return (
     <div className="main">

@@ -7,23 +7,21 @@ import Contact from "./components/Contact";
 import Prices from "./components/Prices";
 import Main from "./components/Main";
 import SingleNews from "./components/SingleNews";
-import Test from "./components/subComponents/Test";
+import Item from "./components/newsParts/Item";
 
 function App() {
   return (
-    <div className="App">
-      {/* <Header />
+    <div style={{ backgroundColor: "grey" }} className="App">
+      <Header />
       <Routes>
-        <Route path="/" element={<Main />} />
-
+        <Route path="*" element={<Main />} />
         <Route path="/darkhandeed" element={<Main />} />
-        <Route path="/news" element={<NewsComponent />} />
+        <Route path="/news*" element={<NewsComponent />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/prices" element={<Prices />} />
-        <Route path="/news/:id" element={<SingleNews />} />
-      </Routes> */}
-      <Test />
+        <Route path="/news/:id" element={<Item />} />
+      </Routes>
       <Footer />
     </div>
   );

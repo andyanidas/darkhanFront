@@ -7,14 +7,17 @@ import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ContentProvider from "./contexts/Content";
 import { UserProvider } from "./contexts/UserContext";
+import NewsProvider from "./contexts/NewsContext";
 ReactDOM.render(
   <BrowserRouter>
     <UserProvider>
-      <ContentProvider>
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
-      </ContentProvider>
+      <NewsProvider>
+        <ContentProvider>
+          <React.StrictMode>
+            <App />
+          </React.StrictMode>
+        </ContentProvider>
+      </NewsProvider>
     </UserProvider>
   </BrowserRouter>,
 

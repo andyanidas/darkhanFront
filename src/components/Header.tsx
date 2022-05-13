@@ -6,11 +6,13 @@ import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
 function Header() {
   const style = {
-    // fontSize: "20px",
     color: "white",
+    bg: {
+      width: "100vw",
+    },
   };
   return (
-    <Navbar expand="lg" bg="dark" style={style}>
+    <Navbar expand="lg" bg="dark" style={style.bg}>
       <Container>
         <Navbar.Brand href="#home">
           <a href="/" id="logo">
