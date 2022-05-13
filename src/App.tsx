@@ -10,7 +10,15 @@ import SingleNews from "./components/newsParts/SingleNews";
 
 function App() {
   return (
-    <div style={{ backgroundColor: "grey" }} className="App">
+    <div
+      style={{
+        backgroundColor: "grey",
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh" as "100vh",
+      }}
+      className="App"
+    >
       <Header />
       <Routes>
         <Route path="*" element={<Main />} />
@@ -19,6 +27,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/prices" element={<Prices />} />
+        {/* <Route path="/teachers" element={<Prices />} /> */}
         <Route path="/news/:id" element={<SingleNews />} />
       </Routes>
       <Footer />

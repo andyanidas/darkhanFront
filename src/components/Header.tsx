@@ -27,7 +27,7 @@ function Header() {
           <Nav.Link href="/news" style={style}>
             МЭДЭЭ
           </Nav.Link>
-          <Nav.Link href="#link" style={style}>
+          <Nav.Link href="/contact" style={style}>
             БАГШ НАР
           </Nav.Link>
           <NavDropdown
