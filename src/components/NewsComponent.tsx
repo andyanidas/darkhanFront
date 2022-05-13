@@ -4,6 +4,8 @@ import "../style/news.css";
 import { LayoutGroup, motion } from "framer-motion";
 import "./temp.css";
 import { useNews } from "../contexts/NewsContext";
+import { Container } from "react-bootstrap";
+import Loading from "./Loading";
 
 export default function NewsComponent() {
   const { loading, error, data } = useNews();
@@ -11,18 +13,24 @@ export default function NewsComponent() {
   useEffect(() => {
     setSelectedId(data ? data[0]?.id : "1");
   }, [data]);
-  if (loading) return <>Loading</>;
+  if (loading) return <Loading />;
   if (error) return <>Error</>;
 
   return (
     <LayoutGroup>
-      <motion.div layoutId="modal">
-        <motion.ul className="card-list">
-          {data?.data.map((news: any) => (
-            <Card key={news.id} {...news} isSelected={news.id === selectedId} />
-          ))}
-        </motion.ul>
-      </motion.div>
+      <Container>
+        <motion.div layoutId="modal">
+          <motion.ul className="card-list">
+            {data?.data.map((news: any) => (
+              <Card
+                key={news.id}
+                {...news}
+                isSelected={news.id === selectedId}
+              />
+            ))}
+          </motion.ul>
+        </motion.div>
+      </Container>
     </LayoutGroup>
   );
 }

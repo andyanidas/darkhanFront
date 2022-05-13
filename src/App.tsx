@@ -6,8 +6,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Prices from "./components/Prices";
 import Main from "./components/Main";
-import SingleNews from "./components/SingleNews";
-import Item from "./components/newsParts/Item";
+import SingleNews from "./components/newsParts/SingleNews";
 
 function App() {
   return (
@@ -20,7 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/prices" element={<Prices />} />
-        <Route path="/news/:id" element={<Item />} />
+        <Route path="/news/:id" element={<SingleNews />} />
       </Routes>
       <Footer />
     </div>

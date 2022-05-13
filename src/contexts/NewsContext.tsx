@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext } from "react";
 import { useFetch } from "../customHooks/useFetch";
 
 const NewsContext = createContext<any>([]);

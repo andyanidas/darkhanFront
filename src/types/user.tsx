@@ -1,5 +1,3 @@
-import React from "react";
-
 export interface User {
   createdAt: string;
   email: string;

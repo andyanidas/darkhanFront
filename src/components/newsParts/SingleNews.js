@@ -10,7 +10,7 @@ export default function Item() {
   const [selectedNews, setSelectedNews] = useState();
   useEffect(() => {
     setSelectedNews(data?.data.find((item) => item.id === parseInt(id)));
-  }, [data]);
+  }, [data, id]);
 
   if (loading) return <>Loading...</>;
   if (error) return <>Error...</>;

@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import "../style/main.css";
 
 import { useFetch } from "../customHooks/useFetch";
-import { Container, Spinner } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { useContent } from "../contexts/Content";
 import { Content } from "../types";
-import Testimonials from "./subComponents/Testimonials";
 import {
   PartOne,
   PartTwo,
@@ -13,7 +12,6 @@ import {
   PartFour,
   PartFive,
 } from "./subComponents";
-import Test from "./subComponents/Test";
 import Loading from "./Loading";
 
 export default function Main() {
