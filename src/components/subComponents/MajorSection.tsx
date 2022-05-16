@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
-import "./major.css";
 const items = ["Багш", "Шинжлэх ухаан", "Урлаг Спорт"];
 
 export function MajorSection() {
