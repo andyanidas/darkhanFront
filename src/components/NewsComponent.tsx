@@ -16,29 +16,41 @@ export default function NewsComponent() {
   }, [data]);
   if (loading) return <Loading />;
   if (error) return <>Error</>;
-
+  const style = {
+    outer: {},
+  };
   return (
-    <LayoutGroup>
-      <Container>
-        <motion.div layoutId="modal">
-          <motion.ul className="card-list">
-            {data?.data.map((news: any) => (
-              <Card
-                key={news.id}
-                {...news}
-                isSelected={news.id === selectedId}
-              />
-            ))}
-          </motion.ul>
-        </motion.div>
-      </Container>
-    </LayoutGroup>
+    <div
+      style={{
+        background:
+          "linear-gradient( 90deg, rgba(55, 51, 113, 1) 0%, rgba(164, 164, 230, 1) 55%, rgba(50, 191, 219, 1) 100%)",
+      }}
+    >
+      <LayoutGroup>
+        <Container>
+          <motion.div layoutId="modal">
+            <motion.ul className="card-list">
+              {data?.data.map((news: any) => (
+                <Card
+                  key={news.id}
+                  {...news}
+                  isSelected={news.id === selectedId}
+                />
+              ))}
+            </motion.ul>
+          </motion.div>
+        </Container>
+      </LayoutGroup>
+    </div>
   );
 }
 
 function Card({ id, attributes }: any) {
   return (
-    <li className={`card ${attributes.title}`}>
+    <li
+      className={`card ${attributes.title}`}
+      style={{ backgroundColor: "rgba(245, 39, 145, 0)", border: "none" }}
+    >
       <div className="card-content-container">
         <motion.div className="card-content" layoutId={`card-container-${id}`}>
           <motion.div

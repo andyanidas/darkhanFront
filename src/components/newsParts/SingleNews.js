@@ -21,7 +21,11 @@ export default function Item() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0, transition: { duration: 0.15 } }}
         transition={{ duration: 0.2, delay: 0.15 }}
-        style={{ pointerEvents: "auto" }}
+        style={{
+          pointerEvents: "auto",
+          // background:
+          //   "linear-gradient( 90deg, rgba(55, 51, 113, 1) 0%, rgba(164, 164, 230, 1) 55%, rgba(50, 191, 219, 1) 100%)",
+        }}
         className="overlay"
       >
         <Link to="/news" />
