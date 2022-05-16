@@ -16,9 +16,7 @@ export default function NewsComponent() {
   }, [data]);
   if (loading) return <Loading />;
   if (error) return <>Error</>;
-  const style = {
-    outer: {},
-  };
+
   return (
     <div
       style={{
