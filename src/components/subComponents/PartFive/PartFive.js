@@ -7,51 +7,55 @@ import {
 import { Routes, Route } from "react-router-dom";
 
 import { Header } from "./Header";
-import { Item } from "./Item";
-import { List } from "./List";
+import Item from "./Item";
+// import { List } from "./List";
+import { useNews } from "../../../contexts/NewsContext";
 
-function Store({ match }) {
-  let { id } = match.params;
-  const imageHasLoaded = true;
+// function Store({ match }) {
+//   let { id } = match.params;
+//   const imageHasLoaded = true;
 
-  return (
-    <LayoutGroup>
-      <List selectedId={id} />
-      <AnimatePresence>
-        {id && imageHasLoaded && <Item id={id} key="item" />}
-      </AnimatePresence>
-    </LayoutGroup>
-  );
-}
+//   return (
+//     <LayoutGroup>
+//       {/* <List selectedId={id} /> */}
+//       <AnimatePresence>
+//         {id && imageHasLoaded && <Item id={id} key="item" />}
+//       </AnimatePresence>
+//     </LayoutGroup>
+//   );
+// }
 export function PartFive({ data }) {
-  // const styles = {
-  //   container: {
-  //     marginTop: "10vh",
-  //     marginBottom: "10vh",
-  //     boxShadow: "10px 10px 20px black",
-  //     padding: " 40px",
-  //     borderRadius: "20px",
-  //     textAlign: "center",
-  //   },
-  //   header: {
-  //     margin: "20px",
-  //   },
-  //   items: {
-  //     height: "100%",
-  //     display: "flex",
-  //     alignItems: "center",
-  //     justifyContent: "space-between",
-  //   },
-  //   p: {
-  //     color: "green",
-  //   },
-  // };
+  console.log(data);
+  const styles = {
+    outer: {
+      marginTop: "10vh",
+      marginBottom: "10vh",
+      boxShadow: "10px 10px 20px black",
+      padding: " 40px",
+      borderRadius: "20px",
+      textAlign: "center",
+    },
+    container: {
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "space-around",
+      marginTop: "20px",
+    },
+    item: {
+      height: "100%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+    },
+  };
   return (
-    <AnimateSharedLayout type="crossfade">
+    <div style={styles.outer}>
       <Header />
-      <Routes>
-        <Route to="/:id" element={<Store />} />
-      </Routes>
-    </AnimateSharedLayout>
+      <div style={styles.container}>
+        {data.slice(0, 4).map((news) => {
+          return <Item data={news} />;
+        })}
+      </div>
+    </div>
   );
 }

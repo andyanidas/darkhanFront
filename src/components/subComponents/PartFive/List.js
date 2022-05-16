@@ -29,15 +29,15 @@ function Card({ id, title, category, theme }) {
   );
 }
 
-export function List({ selectedId }) {
-  return (
-    <ul className="card-list">
-      {items.map((card) => {
-        debugger;
-        return (
-          <Card key={card.id} {...card} isSelected={card.id === selectedId} />
-        );
-      })}
-    </ul>
-  );
-}
+// export function List({ selectedId }) {
+//   return (
+//     <ul className="card-list">
+//       {items.map((card) => {
+//         debugger;
+//         return (
+//           <Card key={card.id} {...card} isSelected={card.id === selectedId} />
+//         );
+//       })}
+//     </ul>
+//   );
+// }

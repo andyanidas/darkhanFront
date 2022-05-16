@@ -13,6 +13,7 @@ import {
   PartFive,
 } from "./subComponents";
 import Loading from "./Loading";
+import Social from "./subComponents/Social";
 
 export default function Main() {
   const { loading, error, data } = useFetch("posts");
@@ -45,8 +46,9 @@ export default function Main() {
           <PartThree />
         </div>
         <PartFour part2={part2} />
-        <PartFive data={data} />
+        <PartFive data={data.data} />
         {/* <Test>{}</Test> */}
+        <Social />
         <div className="part-four">
           <div className="texts">
             <h2>Mobile Applications</h2>
