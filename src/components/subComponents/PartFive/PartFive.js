@@ -1,7 +1,7 @@
 import "./temp.css";
 import { Header } from "./Header";
 import Item from "./Item";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // function Store({ match }) {
 //   let { id } = match.params;
