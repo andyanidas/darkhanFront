@@ -5,15 +5,15 @@ export default function Item({ data }: any) {
   const cardStyle = {
     outer: {
       backgroundImage: "url(" + data.attributes.imageUrl + ")",
-      width: "18vw",
-      height: "18vw",
+      width: "15vw",
+      height: "15vw",
       borderRadius: "10px",
       display: "flex",
       flexDirection: "column-reverse" as "column-reverse",
     },
     hover: {
-      width: "18vw",
-      height: "18vw",
+      width: "15vw",
+      height: "15vw",
       borderRadius: "10px",
       opacity: "0.5",
       position: "absolute" as "absolute",
