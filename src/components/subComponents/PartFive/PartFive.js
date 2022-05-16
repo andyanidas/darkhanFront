@@ -1,6 +1,7 @@
 import "./temp.css";
 import { Header } from "./Header";
 import Item from "./Item";
+import { Link, useNavigate } from "react-router-dom";
 
 // function Store({ match }) {
 //   let { id } = match.params;
@@ -16,6 +17,7 @@ import Item from "./Item";
 //   );
 // }
 export function PartFive({ data }) {
+  const navigate = useNavigate();
   console.log(data);
   const styles = {
     outer: {
@@ -40,7 +42,7 @@ export function PartFive({ data }) {
     },
   };
   return (
-    <div style={styles.outer}>
+    <div style={styles.outer} onClick={() => navigate("/news")}>
       <Header />
       <div style={styles.container}>
         {data.slice(0, 4).map((news) => {

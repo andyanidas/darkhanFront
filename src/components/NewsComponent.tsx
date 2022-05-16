@@ -12,6 +12,7 @@ export default function NewsComponent() {
   const [selectedId, setSelectedId] = useState("1");
   useEffect(() => {
     setSelectedId(data ? data[0]?.id : "1");
+    window.scrollTo(0, 0);
   }, [data]);
   if (loading) return <Loading />;
   if (error) return <>Error</>;

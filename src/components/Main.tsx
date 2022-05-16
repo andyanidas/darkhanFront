@@ -11,6 +11,7 @@ import {
   PartThree,
   PartFour,
   PartFive,
+  MajorSection,
 } from "./subComponents";
 import Loading from "./Loading";
 import Social from "./subComponents/Social";
@@ -45,11 +46,13 @@ export default function Main() {
         <div className="part-one">
           <PartThree />
         </div>
+        <MajorSection />
         <PartFour part2={part2} />
         <PartFive data={data.data} />
         {/* <Test>{}</Test> */}
+
         <Social />
-        <div className="part-four">
+        {/* <div className="part-four">
           <div className="texts">
             <h2>Mobile Applications</h2>
             <p>
@@ -65,7 +68,7 @@ export default function Main() {
             </p>
             <button>Get the app price &#8594;</button>
           </div>
-        </div>
+        </div> */}
       </Container>
     </div>
   );

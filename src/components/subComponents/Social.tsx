@@ -26,6 +26,7 @@ export default function Social() {
       padding: "1rem 6rem",
       fontSize: "2.5rem",
       margin: "5px",
+      backgroundColor: "rgba(214, 214, 214, 0.1)",
     },
   };
   return (

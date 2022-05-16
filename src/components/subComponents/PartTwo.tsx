@@ -10,13 +10,15 @@ export function PartTwo({ part1 }: any) {
     inner: {
       fontWeight: "bold",
       textTransform: "uppercase" as "uppercase",
-      textShadow: "2px 2px 2px black",
+      textShadow: "0.5px 0.5px 200px black",
+      color: "#eff8fe",
+      marginBottom: "30px",
     },
     body: {
       textAlign: "justify" as "justify",
-      color: "white",
+      color: "#eff8fe",
       marginRight: "50px",
-      textShadow: "2px 2px 2px black",
+      textShadow: "0.5px 0.5px 50px black",
     },
   };
   return (
