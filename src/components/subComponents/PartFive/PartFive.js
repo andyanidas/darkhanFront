@@ -1,15 +1,6 @@
 import "./temp.css";
-import {
-  AnimateSharedLayout,
-  AnimatePresence,
-  LayoutGroup,
-} from "framer-motion";
-import { Routes, Route } from "react-router-dom";
-
 import { Header } from "./Header";
 import Item from "./Item";
-// import { List } from "./List";
-import { useNews } from "../../../contexts/NewsContext";
 
 // function Store({ match }) {
 //   let { id } = match.params;

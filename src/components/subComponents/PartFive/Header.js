@@ -1,5 +1,4 @@
-import * as React from "react";
-import { Avatar } from "react-lorem-ipsum";
+import React from "react";
 
 export const Header = () => (
   <header>

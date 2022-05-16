@@ -1,5 +1,4 @@
 import React from "react";
-import { News } from "../../../types";
 
 export default function Item({ data }: any) {
   console.log(data);
