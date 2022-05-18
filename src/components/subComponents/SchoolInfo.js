@@ -8,7 +8,7 @@ export default function SchoolInfo() {
   const [selected, setSelected] = useState({});
   const [eleTest, setEleTest] = useState();
   useEffect(() => {
-    setInfos(contents?.filter((content) => content.attributes.name == "info"));
+    setInfos(contents?.filter((content) => content.attributes.name === "info"));
   }, [contents]);
   useEffect(() => {
     setSelected(infos ? infos[0] : {});
@@ -21,20 +21,6 @@ export default function SchoolInfo() {
   //     ? { opacity: 0 }
   //     : { x: "-100%" }
   // }
-  useEffect(() => {
-    setEleTest(
-      <motion.div
-        className="col-9"
-        // animate={animate}
-        animate={{ x: [0, 200, 0] }}
-        transition={{ ease: "easeOut", duration: 1 }}
-      >
-        <img src={selected?.attributes?.imageUrl} alt="" style={style.image} />
-        <p style={style.text}>{selected?.attributes?.body}</p>
-      </motion.div>
-    );
-  }, [selected]);
-
   const style = {
     outer: {
       boxShadow: "3px 3px 10px black",
@@ -85,6 +71,21 @@ export default function SchoolInfo() {
       marginBottom: "20px",
     },
   };
+
+  useEffect(() => {
+    setEleTest(
+      <motion.div
+        className="col-9"
+        // animate={animate}
+        animate={{ x: [0, 200, 0] }}
+        transition={{ ease: "easeOut", duration: 1 }}
+      >
+        <img src={selected?.attributes?.imageUrl} alt="" style={style.image} />
+        <p style={style.text}>{selected?.attributes?.body}</p>
+      </motion.div>
+    );
+  }, [selected]);
+
   return (
     <div className="row" style={style.outer}>
       <div className="col-3">
