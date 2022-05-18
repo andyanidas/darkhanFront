@@ -1,4 +1,4 @@
-.mainBG {
+/* .mainBG {
   color: rgb(238, 232, 221);
   font-family: Commissioner, sans-serif;
   font-weight: 600;
@@ -31,11 +31,10 @@
   font-size: 40px;
   color: rgb(112, 112, 112);
 }
-/* ---------------- PART 2  ---------------- */
+
 .part-two {
   display: flex;
   justify-content: space-between;
-  /* filter: blur(1px); */
 }
 .part-two div {
   border-radius: 30px;
@@ -72,7 +71,6 @@
   transition: 1s;
 }
 
-/* ---------------- PART 3  ---------------- */
 .part-three {
   margin-top: 10vh;
   margin-bottom: 10vh;
@@ -133,4 +131,4 @@
   border: none;
   box-shadow: black 5px 5px 8px;
   transition: width 1.5s;
-}
+} */

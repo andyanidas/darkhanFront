@@ -4,11 +4,26 @@ import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 const items = ["Багш", "Шинжлэх ухаан", "Урлаг Спорт"];
 
 export function MajorSection() {
+  const majorStyle = {
+    outer: {
+      color: "white",
+      marginTop: "100px",
+      marginBottom: "100px",
+    },
+    header: {
+      marginBottom: "20px",
+      // backgroundColor: "rgb(163,163,229,0.2)",
+    },
+    shadow: {
+      textShadow: "0.5px 0.5px 10px rgb(0,0,0,0.5)",
+      fontWeight: "700",
+    },
+  };
   return (
-    <div>
-      <header>
-        <span>Бидний Таньд Сургах</span>
-        <h1> Мэргэжилүүд</h1>
+    <div style={majorStyle.outer}>
+      <header style={majorStyle.header}>
+        <span style={majorStyle.shadow}>Бидний Таньд Сургах</span>
+        <h1 style={majorStyle.shadow}> Мэргэжилүүд</h1>
         <div className="avatar">
           <img src="./images/icons/main_logo.png" alt="" />
         </div>

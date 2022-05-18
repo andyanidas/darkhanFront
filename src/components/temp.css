@@ -35,21 +35,10 @@ body {
   padding: 45px 25px;
 }
 
-h1 {
-  font-weight: bold;
-  color: white;
-  margin: 6px 0 12px;
-}
-
 .date {
   color: var(--secondary);
   font-size: 14px;
   text-transform: uppercase;
-}
-
-header {
-  border-bottom: 1px solid var(--divider);
-  position: relative;
 }
 
 .avatar {
@@ -212,12 +201,6 @@ h2 {
   padding: 460px 35px 35px 35px;
   max-width: 700px;
   width: 90vw;
-}
-
-p {
-  color: #9d9ca1;
-  font-size: 20px;
-  line-height: 28px;
 }
 
 @media only screen and (max-width: 800px) {

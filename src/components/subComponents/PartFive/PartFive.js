@@ -45,8 +45,8 @@ export function PartFive({ data }) {
     <div style={styles.outer} onClick={() => navigate("/news")}>
       <Header />
       <div style={styles.container}>
-        {data.slice(0, 4).map((news) => {
-          return <Item data={news} />;
+        {data.slice(0, 4).map((news, i) => {
+          return <Item data={news} key={i} />;
         })}
       </div>
     </div>

@@ -2,7 +2,10 @@ import React from "react";
 import { Spinner } from "react-bootstrap";
 
 export default function Loading() {
-  const style = {
+  const loadingStyle = {
+    outer: {
+      zIndex: "2",
+    },
     spinBody: {
       height: "100vh",
       width: "100vw",
@@ -23,9 +26,9 @@ export default function Loading() {
     },
   };
   return (
-    <div>
-      <div style={style.spinBody}>
-        <Spinner animation="border" style={style.spinning} />
+    <div style={loadingStyle.outer}>
+      <div style={loadingStyle.spinBody}>
+        <Spinner animation="border" style={loadingStyle.spinning} />
         <p style={{ opacity: "1", color: "white", fontSize: "4rem" }}>
           Та түр хүлээнэ үү!
         </p>

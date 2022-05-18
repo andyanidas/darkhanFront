@@ -6,7 +6,7 @@ import { Container } from "react-bootstrap";
 import { useContent } from "../contexts/Content";
 import { Content } from "../types";
 import {
-  PartOne,
+  CarouselPart,
   PartTwo,
   PartThree,
   PartFour,
@@ -15,6 +15,7 @@ import {
 } from "./subComponents";
 import Loading from "./Loading";
 import Social from "./subComponents/Social";
+import SchoolInfo from "./subComponents/SchoolInfo";
 
 export default function Main() {
   const { loading, error, data } = useFetch("posts");
@@ -38,7 +39,7 @@ export default function Main() {
   if (error) return <>Error</>;
   return (
     <div className="main">
-      <PartOne />
+      <CarouselPart />
       <Container>
         <PartTwo part1={part1} />
       </Container>
@@ -49,10 +50,10 @@ export default function Main() {
         <MajorSection />
         <PartFour part2={part2} />
         <PartFive data={data.data} />
-        {/* <Test>{}</Test> */}
+        <SchoolInfo />
 
         <Social />
-        {/* <div className="part-four">
+        <div className="part-four">
           <div className="texts">
             <h2>Mobile Applications</h2>
             <p>
@@ -68,7 +69,7 @@ export default function Main() {
             </p>
             <button>Get the app price &#8594;</button>
           </div>
-        </div> */}
+        </div>
       </Container>
     </div>
   );

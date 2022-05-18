@@ -1,4 +1,4 @@
-export * from "./PartOne";
+export * from "./CarauselPart";
 export * from "./PartTwo";
 export * from "./PartThree";
 export * from "./PartFour";

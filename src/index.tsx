@@ -15,6 +15,7 @@ ReactDOM.render(
         <ContentProvider>
           <React.StrictMode>
             <App />
+            {/* <Test /> */}
           </React.StrictMode>
         </ContentProvider>
       </NewsProvider>

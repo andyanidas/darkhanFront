@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer";
 
 export default function Social() {
   const socialStyle = {
@@ -30,25 +31,31 @@ export default function Social() {
     },
   };
   return (
-    <div style={socialStyle.outer}>
-      <a
+    <motion.div style={socialStyle.outer}>
+      <motion.a
         style={socialStyle.singleItem}
         href={"https://facebook.com/darkhandeed1997"}
+        transition={{ duration: 0.5 }}
+        whileHover={{ scale: 1.1 }}
       >
         Facebook
-      </a>
-      <a
+      </motion.a>
+      <motion.a
         style={socialStyle.singleItem}
         href={"https://instagram.com/darkhandeed1997"}
+        transition={{ duration: 0.5 }}
+        whileHover={{ scale: 1.1 }}
       >
         Instagram
-      </a>
-      <a
+      </motion.a>
+      <motion.a
         style={socialStyle.singleItem}
         href={"https://youtube.com/darkhandeed1997"}
+        transition={{ duration: 0.5 }}
+        whileHover={{ scale: 1.1 }}
       >
         Youtube
-      </a>
-    </div>
+      </motion.a>
+    </motion.div>
   );
 }
