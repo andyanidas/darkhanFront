@@ -16,6 +16,7 @@ import {
 import Loading from "./Loading";
 import Social from "./subComponents/Social";
 import SchoolInfo from "./subComponents/SchoolInfo";
+import Map from "./subComponents/Map";
 
 export default function Main() {
   const { loading, error, data } = useFetch("posts");
@@ -38,7 +39,7 @@ export default function Main() {
   // if (loading) return <Spinner animation="border" />;
   if (error) return <>Error</>;
   return (
-    <div className="main">
+    <div className="ain">
       <CarouselPart />
       <Container>
         <PartTwo part1={part1} />
@@ -53,24 +54,58 @@ export default function Main() {
         <SchoolInfo />
 
         <Social />
-        <div className="part-four">
-          <div className="texts">
-            <h2>Mobile Applications</h2>
-            <p>
-              To create a fast and smooth app for any platform, we also deliver
-              products with outsourcing app development model. This model gives
-              a reasonable solution to control the budget and other recourses.{" "}
-            </p>
-            <p>
-              Our team connects conventional essential technologies and
-              architecture with the unique logic of the app. Combined with a
-              polished design and UI/UX an app becomes the one that reaches
-              goals of our customers and wins the hearts of users.
-            </p>
-            <button>Get the app price &#8594;</button>
+        <Container className="part-four">
+          <div className="row inline-block">
+            <div className="col-6 text-start mt-auto mb-auto">
+              <h2>ХОЛБОО БАРИХ</h2>
+              <p>
+                Сургалтын талаар дэлгэрэнгүй мэдээлэл авах бол та манай оффис
+                дээр ирж уулзах эсвэл манай дугаарт холбогдоно уу.
+              </p>
+
+              <div
+                style={{
+                  textAlign: "center",
+                  paddingTop: "auto",
+                  paddingBottom: "auto",
+
+                  color: "white",
+                  backgroundColor: "rgba(55, 51, 113, 1",
+                  width: "270px",
+                  height: "60px",
+                  borderRadius: "10px",
+                  border: "none",
+                  boxShadow: "3px 3px 10px white  ",
+                }}
+              >
+                <a
+                  href="tel:8665562570"
+                  style={{
+                    textDecoration: "none",
+                    display: "inline-block",
+                    color: "white",
+                    fontSize: "1.5rem",
+                    marginTop: "15px",
+                    marginBottom: "auto",
+                  }}
+                >
+                  ЗАЛГАХ 866-556-2570
+                </a>
+              </div>
+            </div>
+
+            <div className="col-6">
+              <img
+                src="/pictures/location.png"
+                alt=""
+                style={{ borderRadius: "30px", width: "100%" }}
+              />
+            </div>
           </div>
-        </div>
+          <div className="row"></div>
+        </Container>
       </Container>
+      <Map />
     </div>
   );
 }

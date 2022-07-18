@@ -6,8 +6,9 @@ export function useFetch(url: string, method?: Method): FetchHook {
   const [data, setData] = useState<{ data: Array<News>; meta: object } | null>(
     null
   );
+  
   const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);

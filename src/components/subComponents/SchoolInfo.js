@@ -84,7 +84,7 @@ export default function SchoolInfo() {
         <p style={style.text}>{selected?.attributes?.body}</p>
       </motion.div>
     );
-  }, [selected, style.image, style.text]);
+  }, [selected]);
 
   return (
     <div className="row" style={style.outer}>
